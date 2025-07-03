@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   protected title = 'todo-app';
+  items = [
+    { description: 'Wake up', action: 'No' },
+    { description: 'Sport', action: 'No' },
+    { description: 'Breakfast', action: 'No' },
+    { description: 'Sleep', action: 'No' },
+  ];
 }
